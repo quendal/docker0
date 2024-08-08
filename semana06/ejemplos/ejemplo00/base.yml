@@ -1,0 +1,20 @@
+version: '3'  # Especifica la versión de Compose
+
+services:  # Define los servicios (contenedores)
+  nombre_servicio_1:
+    image: nombre_imagen:tag  # Especifica la imagen de Docker
+    ports:  # Mapea los puertos
+      - "80:80"
+    volumes:  # Monta volúmenes
+      - ./directorio_local:/directorio_contenedor  # bind
+      - nombre_volumen:/otro_directorio_conteendor # volume
+    environment:  # Define variables de entorno
+      - VARIABLE=valor
+
+volumes:  # Define volúmenes (opcional)
+  nombre_volumen:
+    driver: local
+
+networks:  # Define redes personalizadas (opcional)
+  nombre_red:
+    driver: bridge

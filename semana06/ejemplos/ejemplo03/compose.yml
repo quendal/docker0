@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  nginx1:
+    image: nginx:latest
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+      endpoint_mode: dnsrr
+
+  nginx2:
+    image: nginx:latest
+    deploy:
+      replicas: 3
+      restart_policy:
+        condition: on-failure
+      endpoint_mode: dnsrr
+
+

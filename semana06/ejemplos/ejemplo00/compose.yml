@@ -1,0 +1,8 @@
+version: '3'  # Especifica la versión de Compose
+
+services:
+  webapp:
+    image: nginx
+    ports:
+      - "8080:80"
+      

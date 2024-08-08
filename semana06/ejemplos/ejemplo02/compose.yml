@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  nginx1:
+    image: nginx:latest
+    #container_name: nginx1
+    # networks:
+    #   my_network:
+    #     ipv4_address: 10.16.0.2
+    # ports:
+    #   - "8081:80"
+    deploy:
+      replicas: 3
+
+  nginx2:
+    image: nginx:latest
+    #container_name: nginx2
+    # networks:
+    #   my_network:
+    #     ipv4_address: 10.16.0.3
+    # ports:
+    #   - "8082:80"
+    deploy:
+      replicas: 3
+
+networks:
+  my_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.16.0.0/16
