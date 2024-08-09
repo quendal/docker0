@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  carrito:
+    build: ./carrito/
+    ports:
+      - "5000:5000"
+    networks:
+      - mynetwork
+  perfil:
+    build: ./perfil/
+    ports:
+      - "3001:3001"
+    networks:
+      - mynetwork
+  producto:
+    build: ./producto/
+    ports:
+      - "3002:3002"
+    networks:
+      - mynetwork
+  mongo: 
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+
+volumes:
+  mongo_data:
+    external: true
+      

@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  servicio01: 
+    image: nginx
+    ports:
+      - "7080:80"
+      - "7090:80"
+    volumes:
+      - volumen_compose_01:/opt/volumen/01
+      - /Users/quendalyoc/workdir/codegt/api-node/compose/:/opt/volumen/02
+    
+  servicio02:
+    image: nginx
+    ports:
+      - "7081:80"
+      - "7091:80"
+    volumes:
+      - volumen_compose_01:/opt/volumen/01
+    
+  servicio03:
+    image: nginx
+    ports:
+      - "7082:80"
+      - "7094:80"
+    volumes:
+      - volumen_compose_02:/opt/volumen/01
+    networks:
+      - existe
+    
+volumes:
+  volumen_compose_01:
+  volumen_compose_02:
+networks:
+  existe:
+    external: true

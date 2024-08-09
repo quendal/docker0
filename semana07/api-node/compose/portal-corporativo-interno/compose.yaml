@@ -1,0 +1,41 @@
+version: '3'
+
+services:
+  servicio01: 
+    image: nginx
+    ports:
+      - "8080:80"
+      - "8090:80"
+    volumes:
+      - volumen_compose_01:/opt/volumen/01
+      - /Users/quendalyoc/workdir/codegt/api-node/compose/:/opt/volumen/02
+    networks:
+      - red_global
+      - red_frontend
+  servicio02:
+    image: nginx
+    ports:
+      - "8081:80"
+      - "8091:80"
+    volumes:
+      - volumen_compose_01:/opt/volumen/01
+    networks:
+      - red_global
+  servicio03:
+    image: nginx
+    ports:
+      - "8082:80"
+      - "8094:80"
+    volumes:
+      - volumen_compose_02:/opt/volumen/01
+    networks:
+      - red_global
+      - red_frontend
+volumes:
+  volumen_compose_01:
+  volumen_compose_02:
+
+networks:
+  red_global:
+  red_frontend:
+

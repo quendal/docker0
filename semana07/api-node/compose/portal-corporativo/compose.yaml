@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  servicio01: 
+    image: nginx
+  servicio02:
+    image: nginx
+  servicio03:
+    image: nginx
+  servicio04:
+    image: nginx
+
