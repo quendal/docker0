@@ -33,4 +33,8 @@ docker push docker.io/quendal/producto:1
 4. Modificar el archivo seman08/03-proyecto/compose.yaml
    1. Se debe cambiar las direcciones de las imagenes por las generadas por ustedes
    2. El FrontEnd no se subirá a Docker Hub, pero si se levanta local (ver en compose.yaml que se construye con build)
-
+5. Levantar el proyecto:
+```
+docker compose up 
+# o docker compose up -d
+```
