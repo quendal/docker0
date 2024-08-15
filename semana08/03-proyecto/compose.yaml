@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  carrito:
+    build: docker.io/quendal/carrito:1
+    ports:
+      - "5000:5000"
+    networks:
+      - mynetwork
+      
+  perfil:
+    image: docker.io/quendal/perfil:1
+    ports:
+      - "3001:3001"
+    networks:
+      - mynetwork
+
+  producto:
+    build: docker.io/quendal/producto:1
+    ports:
+      - "3002:3002"
+    networks:
+      - mynetwork
+    depends_on:
+      - mongo
+
+  web:
+    build: ./frontend/web
+    ports:
+      - "80:80"
+    networks:
+      - mynetwork
+    depends_on:
+      - perfil
+      - producto
+      - carrito
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+
+volumes:
+  mongo_data:

@@ -1,0 +1,8 @@
+version: '3'
+services:
+  python-q:
+    image: python-q
+    ports:
+      - "8001:8000"
+    deploy:
+      replicas: 3
