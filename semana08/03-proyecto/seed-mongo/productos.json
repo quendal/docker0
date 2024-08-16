@@ -1,0 +1,80 @@
+[{
+    "_id": {
+      "$oid": "6621f863b96ff9a0acd4fc8f"
+    },
+    "name": "Producto 1",
+    "price": 10,
+    "description": "Description 1"
+  },
+  {
+    "_id": {
+      "$oid": "66234bd1b7326075a73a7540"
+    },
+    "name": "Producto 2",
+    "price": 20,
+    "description": "Description 2"
+  },
+  {
+    "_id": {
+      "$oid": "66234bdeb7326075a73a7541"
+    },
+    "name": "Producto 3",
+    "price": 30,
+    "description": "Description 3"
+  },
+  {
+    "_id": {
+      "$oid": "66234beab7326075a73a7542"
+    },
+    "name": "Producto 4",
+    "price": 40,
+    "description": "Description 4"
+  },
+  {
+    "_id": {
+      "$oid": "66234bf5b7326075a73a7543"
+    },
+    "name": "Producto 5",
+    "price": 50,
+    "description": "Description 5"
+  },
+  {
+    "_id": {
+      "$oid": "66234c02b7326075a73a7544"
+    },
+    "name": "Producto 6",
+    "price": 60,
+    "description": "Description 6"
+  },
+  {
+    "_id": {
+      "$oid": "66234e7bb7326075a73a7545"
+    },
+    "name": "Producto 7",
+    "price": 70,
+    "description": "Description 7"
+  },
+  {
+    "_id": {
+      "$oid": "66234e89b7326075a73a7546"
+    },
+    "name": "Producto 8",
+    "price": 80,
+    "description": "Description 8"
+  },
+  {
+    "_id": {
+      "$oid": "66234eb2b7326075a73a7547"
+    },
+    "name": "Producto 9",
+    "price": 90,
+    "description": "Description 9"
+  },
+  {
+    "_id": {
+      "$oid": "66234ec6b7326075a73a7548"
+    },
+    "name": "Producto 10",
+    "price": 100,
+    "description": "Description 10"
+  }]
