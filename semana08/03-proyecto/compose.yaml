@@ -2,7 +2,7 @@ version: '3'
 
 services:
   carrito:
-    build: docker.io/quendal/carrito:1
+    image: docker.io/quendal/carrito:1
     ports:
       - "5000:5000"
     networks:
@@ -16,7 +16,7 @@ services:
       - mynetwork
 
   producto:
-    build: docker.io/quendal/producto:1
+    image: docker.io/quendal/producto:1
     ports:
       - "3002:3002"
     networks:

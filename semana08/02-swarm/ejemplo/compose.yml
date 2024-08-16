@@ -1,8 +1,25 @@
 version: '3'
 services:
   python-q:
-    image: python-q
+    #build: ./Dockerfile # no funciona
+    image: imagen-python-recien-creada:1
     ports:
       - "8001:8000"
     deploy:
       replicas: 3
+    networks:
+      - distribuida
+  otro-servicio:
+    #build: ./Dockerfile # no funciona
+    image: imagen-python-recien-creada:1
+    ports:
+      - "8002:8000"
+    deploy:
+      replicas: 3
+    networks:
+      - distribuida
+
+networks:
+  distribuida:
+    external: true
+  
